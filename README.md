@@ -18,6 +18,14 @@ docker-compose up
 Then, you can check host name by
 `cat docker_volumes/tor_hidden_service/hostname ` command.
 
-You can access to the page like the following.
+
+You can send a file by
+
+```bash
+torsocks curl -T ./mytext.txt http://yhxhvqs46f6bxfxc.onion
+```
+
+Or you can access to the page like the following on Tor Browser.
 
 ![demo1](demo_images/demo1.png)
+
