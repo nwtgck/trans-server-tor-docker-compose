@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+  trans:
+    image: nwtgck/trans-server-akka:v1.17.0
+    restart: always
+    expose:
+      - "80"
+      - "443"
+    volumes:
+      - ./docker_volumes/trans-db:/trans/db
+
+  tor:
+    build: tor_for_trans_server
+    depends_on:
+      - trans
+    restart: always
+    volumes:
+      - ./docker_volumes/tor_hidden_service:/var/lib/tor/hidden_service
