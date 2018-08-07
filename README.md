@@ -1,6 +1,6 @@
 # trans-server-tor-docker-compose
 
-Trans server as [Tor](https://www.torproject.org/) Hidden Service
+[Trans server](https://github.com/nwtgck/trans-server-akka) as [Tor](https://www.torproject.org/) Hidden Service
 
 ## Run server
 
@@ -10,10 +10,12 @@ Here is how to run Trans server as Tor Hidden Service.
 # Go to this repo
 cd <this repo>
 # Initialize "tor_hidden_service" for docker volume sharing
-./init_shared_tor_hidden_service.sh 
+sudo ./init_shared_tor_hidden_service.sh 
 # Run the server
 docker-compose up
 ```
+
+(NOTE: `sudo` is not necessary if you use [Docker For Mac](https://www.docker.com/docker-mac))
 
 ## Data Persistence
 
